@@ -1,0 +1,36 @@
+html { 
+    margin: 0px !important;
+}
+
+body{
+    margin: 1px;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 125px;
+    background-color: white;
+}
+
+header div {
+    height: 115px;
+    flex-grow: 1;
+}
+
+header div img {
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    margin: 0px;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li{
+    padding: 0px 10px;
+
+}
