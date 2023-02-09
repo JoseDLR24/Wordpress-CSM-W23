@@ -654,3 +654,32 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+/** DONT MESS WIT THE CODE ABOVE */
+// 	add our custom post type
+function team_init(){
+    $args = array(
+        'label' => 'Team', 
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => 'false',
+        'query_var' => true,
+        'menu_icon' => 'dashicons-universal-access',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpts',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'post-formats',
+            'page-attributes',
+        )
+    );
+    register_post_type('team', $args);
+}
+add_action('init', 'team_init');
+
